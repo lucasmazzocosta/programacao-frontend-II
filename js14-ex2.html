@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto INSS</title>
+</head>
+<body>
+    <script>
+        const TETO_INSS = 8475.55;
+        let perfilGerente;
+        let descontoInss;
+        let salario = prompt("Entre com o salário:");
+
+        if (salario<=TETO_INSS) {
+            descontoInss = salario*0.11;
+            perfilGerente = false;
+        } else {
+            descontoInss = TETO_INSS*0.11;
+            perfilGerente = true;
+        }
+        alert(`Desconto INSS: ${descontoInss.toFixed(2)}`);
+        perfilGerente ? alert("Você é um gerente!") : alert("Você não é um gerente!");        
+    </script>
+</body>
+</html>
